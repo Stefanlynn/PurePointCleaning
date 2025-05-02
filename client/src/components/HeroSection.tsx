@@ -65,41 +65,95 @@ export default function HeroSection() {
           </button>
         </div>
         
-        {/* Right side callout - JaniKing inspired */}
-        <div className="hidden md:block">
-          <div className="bg-white rounded-lg shadow-2xl p-8 transform rotate-1">
-            <h2 className="text-2xl font-bold text-primary mb-4">
-              Commercial Cleaning Specialists
-            </h2>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        {/* Right side callout - JaniKing inspired - Visible on both desktop and mobile */}
+        <div className="md:block">
+          {/* Desktop Version */}
+          <div className="hidden md:block">
+            <div className="bg-white rounded-lg shadow-2xl p-8 transform rotate-1">
+              <h2 className="text-2xl font-bold text-primary mb-4">
+                Commercial Cleaning Specialists
+              </h2>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Offices & Business Spaces</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Churches & Event Spaces</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Retail & Commercial Properties</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Customized Cleaning Solutions</span>
+                </li>
+              </ul>
+              <div className="mt-6 p-4 bg-primary/10 rounded-md border border-primary/20">
+                <p className="font-bold text-primary">Our Price Match Guarantee</p>
+                <p className="text-sm">We'll beat any competitor's price—no questions asked!</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Version - More compact */}
+          <div className="md:hidden mt-8">
+            <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-5">
+              <h2 className="text-xl font-bold text-primary mb-3 flex items-center">
+                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
+                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                Commercial Cleaning Specialists
+              </h2>
+              
+              <div className="grid grid-cols-2 gap-2 mb-3">
+                <div className="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm">Offices & Business</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm">Churches & Events</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm">Retail Properties</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-sm">Custom Solutions</span>
+                </div>
+              </div>
+              
+              <div className="p-3 bg-primary/10 rounded-md border border-primary/20 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>Offices & Business Spaces</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Churches & Event Spaces</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Retail & Commercial Properties</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Customized Cleaning Solutions</span>
-              </li>
-            </ul>
-            <div className="mt-6 p-4 bg-primary/10 rounded-md border border-primary/20">
-              <p className="font-bold text-primary">Our Price Match Guarantee</p>
-              <p className="text-sm">We'll beat any competitor's price—no questions asked!</p>
+                <div>
+                  <p className="font-bold text-primary text-sm">Price Match Guarantee</p>
+                  <p className="text-xs text-gray-600">We'll beat any competitor's price!</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
