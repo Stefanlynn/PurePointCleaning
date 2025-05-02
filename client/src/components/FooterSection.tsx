@@ -51,7 +51,7 @@ export default function FooterSection() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center mb-4">
-              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-12 bg-white rounded p-1 mr-3" />
+              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-12 rounded-md mr-3" />
               <div className="text-2xl font-bold">
                 <span className="text-white">Pure</span>
                 <span className="text-secondary">Point</span>

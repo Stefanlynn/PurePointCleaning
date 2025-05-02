@@ -55,7 +55,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
               }}
               className="flex items-center"
             >
-              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-10 mr-2" />
+              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-10 mr-2 rounded-md" />
               <div className="text-2xl font-bold">
                 <span className="text-primary">Pure</span>
                 <span className="text-secondary">Point</span>
