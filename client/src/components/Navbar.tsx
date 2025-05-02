@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { scrollToSection } from "@/lib/utils";
-import logoImg from "../assets/logo.png";
 
 interface NavbarProps {
   activeSection: string;
@@ -40,31 +39,21 @@ export default function Navbar({ activeSection }: NavbarProps) {
   return (
     <header 
       className={`fixed w-full bg-white z-50 transition-all duration-300 ${
-        scrolled ? "shadow-sm border-b border-gray-100" : ""
+        scrolled ? "shadow-md" : ""
       }`} 
       id="navbar"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <a 
-              href="#home" 
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavLinkClick("home");
-              }}
-              className="flex items-center"
-            >
-              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-8 mr-3 rounded-md" />
-              <div className="text-xl font-medium">
-                <span className="text-gray-900">Pure</span>
-                <span className="text-primary">Point</span>
-              </div>
-            </a>
+            <div className="text-2xl font-bold">
+              <span className="text-primary">Pure</span>
+              <span className="text-secondary">Point</span>
+            </div>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -73,26 +62,16 @@ export default function Navbar({ activeSection }: NavbarProps) {
                   e.preventDefault();
                   handleNavLinkClick(link.href);
                 }}
-                className={`text-sm font-medium transition duration-300 ${
+                className={`font-medium transition duration-300 ${
                   activeSection === link.href
                     ? "text-primary"
-                    : "text-gray-600 hover:text-gray-900"
+                    : "text-gray-700 hover:text-primary"
                 }`}
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          
-          {/* Contact button for desktop */}
-          <div className="hidden md:block">
-            <button
-              onClick={() => handleNavLinkClick("contact")}
-              className="bg-primary hover:bg-primary-dark text-white text-sm font-medium py-2 px-5 rounded-md transition duration-300"
-            >
-              Get a Quote
-            </button>
-          </div>
           
           {/* Mobile Navigation Button */}
           <div className="md:hidden">
@@ -111,7 +90,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={1.5}
+                  strokeWidth={2}
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -122,11 +101,11 @@ export default function Navbar({ activeSection }: NavbarProps) {
       
       {/* Mobile Navigation Menu */}
       <div
-        className={`mobile-menu md:hidden bg-white border-t border-gray-100 absolute w-full transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+        className={`mobile-menu md:hidden bg-white shadow-lg absolute w-full transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "transform-none" : "transform -translate-y-full"
         }`}
       >
-        <div className="container mx-auto px-6 py-4 space-y-4">
+        <div className="container mx-auto px-4 py-3 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -138,18 +117,12 @@ export default function Navbar({ activeSection }: NavbarProps) {
               className={`block font-medium py-2 transition duration-300 ${
                 activeSection === link.href
                   ? "text-primary"
-                  : "text-gray-600 hover:text-gray-900"
+                  : "text-gray-700 hover:text-primary"
               }`}
             >
               {link.label}
             </a>
           ))}
-          <button
-            onClick={() => handleNavLinkClick("contact")}
-            className="w-full bg-gray-50 hover:bg-gray-100 text-primary font-medium py-3 px-4 rounded-md transition duration-300 mt-4 text-center"
-          >
-            Get a Quote
-          </button>
         </div>
       </div>
     </header>
