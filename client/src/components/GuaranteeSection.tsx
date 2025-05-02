@@ -139,7 +139,7 @@ export default function GuaranteeSection() {
                 {guarantee.icon}
               </div>
               <h3 className="text-2xl font-bold mb-3">{guarantee.title}</h3>
-              <p className="text-gray-600">{guarantee.description}</p>
+              <p className="text-gray-700 font-medium">{guarantee.description}</p>
               
               {guarantee.featured && (
                 <button
@@ -156,7 +156,7 @@ export default function GuaranteeSection() {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold font-sans mb-2">What Our Clients Say</h3>
-            <p className="text-gray-600">Don't just take our word for it - here's what businesses like yours think</p>
+            <p className="text-gray-700 font-medium">Don't just take our word for it - here's what businesses like yours think</p>
           </div>
           
           <div className="max-w-5xl mx-auto relative">
@@ -194,7 +194,7 @@ export default function GuaranteeSection() {
 
                       <div>
                         <p className="font-bold text-lg">{testimonial.name}</p>
-                        <p className="text-gray-600">{testimonial.title}, {testimonial.company}</p>
+                        <p className="text-gray-700">{testimonial.title}, {testimonial.company}</p>
                       </div>
                     </div>
                   </div>
