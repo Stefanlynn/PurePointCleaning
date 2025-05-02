@@ -1,0 +1,65 @@
+Create a modern, responsive one-page website for a commercial cleaning company called PurePoint Cleaning. The site should be clean, professional, and visually similar to https://cleanspace.com, with sections that scroll rather than separate pages. The site should include:
+
+1. Hero Section
+    •    Headline: “Let Us Help Your Business Shine”
+    •    Subheadline: “Reliable, high-quality commercial cleaning for the Atlanta Metro area”
+    •    CTA Button: “Request a Quote”
+
+2. About Us Section
+    •    Heading: “Who We Are”
+    •    Paragraph:
+
+PurePoint Cleaning is a locally owned commercial cleaning company serving small and medium-sized businesses across the Atlanta Metro area. We deliver high-quality, reliable cleaning services with integrity, professionalism, and a commitment to excellence.
+
+Our price match guarantee means we’ll beat any competitor’s price—no questions asked. And our unique closeout process ensures every job is completed thoroughly, with photo documentation of each room after every visit.
+
+At PurePoint, we don’t just clean spaces—we build trust.
+
+3. Services Section
+    •    Heading: “Our Services”
+    •    Bullet list:
+    •    Office Cleaning
+    •    Auditorium Cleaning
+    •    Janitorial Services
+    •    Floor Care (sweeping, mopping, vacuuming, polishing)
+    •    Restroom Sanitation
+    •    Trash Removal & Recycling
+    •    Breakroom & Kitchen Cleaning
+    •    Window & Glass Cleaning
+    •    High-Touch Surface Disinfecting
+    •    Customized Cleaning Schedules
+
+4. Industries Served Section
+    •    Heading: “Who We Serve”
+    •    Bullet list:
+    •    Church Buildings
+    •    Clothing Stores
+    •    Event Spaces
+    •    Offices
+    •    Any Business That’s Open to the Public
+
+5. Guarantee Section
+    •    Heading: “Why Choose Us”
+    •    3 short callouts with icons (or bold headings):
+    •    Price Match Guarantee – We’ll beat any competitor’s price.
+    •    Closeout Process – Photo documentation after every visit.
+    •    Customized Plans – Cleaning schedules tailored to your business.
+
+6. Contact Section
+    •    Heading: “Let’s Get Started”
+    •    Subheading: “Fill out the form and we’ll get back to you within 24 hours.”
+    •    Contact form with the following fields:
+    •    Full Name
+    •    Company Name
+    •    Email
+    •    Phone
+    •    What type of cleaning services are you looking for? (text input)
+    •    Preferred contact method (dropdown: Email / Phone)
+    •    Message (optional)
+
+7. Footer
+    •    Include links or placeholder text for:
+    •    Privacy Policy
+    •    Terms of Service
+    •    Social icons (LinkedIn or Facebook if applicable)
+    •    Copyright: “© 2025 PurePoint Cleaning. All rights reserved.”
