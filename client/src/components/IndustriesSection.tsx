@@ -125,7 +125,7 @@ export default function IndustriesSection() {
                 {industry.icon}
               </div>
               <h3 className="text-xl font-bold mb-2 text-white">{industry.title}</h3>
-              <p className="text-white/80">{industry.description}</p>
+              <p className="text-white/90 font-medium">{industry.description}</p>
             </div>
           ))}
         </div>
