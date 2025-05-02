@@ -4,50 +4,108 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1623861397340-903fd08650ec?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080')"
-      }}
+      className="relative min-h-screen flex flex-col justify-center pt-24"
     >
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-      <div className="container mx-auto px-4 h-full flex items-center relative z-10">
-        <div className="max-w-2xl text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-4">
+      {/* Background with gradient overlay - JaniKing style */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1623861397340-903fd08650ec?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080" 
+          alt="Commercial Cleaning" 
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      {/* Content Grid - JaniKing inspired layout */}
+      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center py-20 relative z-20">
+        <div className="text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
             Let Us Help Your Business Shine
           </h1>
-          <p className="text-xl md:text-2xl mb-8">
+          <p className="text-xl md:text-2xl mb-8 font-light">
             Reliable, high-quality commercial cleaning for the Atlanta Metro area
           </p>
+          
+          {/* Feature boxes - JaniKing style */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-md border border-white/20">
+              <div className="flex items-center gap-3">
+                <div className="text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Professional Staff</h3>
+                  <p className="text-sm text-white/80">Trained & Background Checked</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm p-4 rounded-md border border-white/20">
+              <div className="flex items-center gap-3">
+                <div className="text-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold">Price Match Guarantee</h3>
+                  <p className="text-sm text-white/80">We'll Beat Any Competitor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <button
             onClick={() => scrollToSection("contact")}
-            className="inline-block bg-primary hover:bg-primary-dark text-white font-medium py-3 px-8 rounded-md transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-block bg-secondary hover:bg-accent-dark text-primary font-bold py-4 px-8 rounded transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
           >
-            Request a Quote
+            Request a Free Quote
           </button>
         </div>
+        
+        {/* Right side callout - JaniKing inspired */}
+        <div className="hidden md:block">
+          <div className="bg-white rounded-lg shadow-2xl p-8 transform rotate-1">
+            <h2 className="text-2xl font-bold text-primary mb-4">
+              Commercial Cleaning Specialists
+            </h2>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Offices & Business Spaces</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Churches & Event Spaces</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Retail & Commercial Properties</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-secondary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Customized Cleaning Solutions</span>
+              </li>
+            </ul>
+            <div className="mt-6 p-4 bg-primary/10 rounded-md border border-primary/20">
+              <p className="font-bold text-primary">Our Price Match Guarantee</p>
+              <p className="text-sm">We'll beat any competitor's price—no questions asked!</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-        <button
-          onClick={() => scrollToSection("about")}
-          className="text-white animate-bounce"
-          aria-label="Scroll to About section"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
-        </button>
-      </div>
+      
+      {/* Removed scroll indicator arrow as requested */}
     </section>
   );
 }
