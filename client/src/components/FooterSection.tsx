@@ -1,4 +1,5 @@
 import { scrollToSection } from "@/lib/utils";
+import logoImg from "../assets/logo.png";
 
 export default function FooterSection() {
   const quickLinks = [
@@ -49,9 +50,12 @@ export default function FooterSection() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <div className="text-2xl font-bold mb-4">
-              <span className="text-white">Pure</span>
-              <span className="text-secondary">Point</span>
+            <div className="flex items-center mb-4">
+              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-12 bg-white rounded p-1 mr-3" />
+              <div className="text-2xl font-bold">
+                <span className="text-white">Pure</span>
+                <span className="text-secondary">Point</span>
+              </div>
             </div>
             <p className="text-white/70 max-w-md">
               Professional commercial cleaning services for businesses across the Atlanta Metro area.

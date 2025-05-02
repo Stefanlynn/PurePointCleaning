@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { scrollToSection } from "@/lib/utils";
+import logoImg from "../assets/logo.png";
 
 interface NavbarProps {
   activeSection: string;
@@ -46,10 +47,20 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <div className="text-2xl font-bold">
-              <span className="text-primary">Pure</span>
-              <span className="text-secondary">Point</span>
-            </div>
+            <a 
+              href="#home" 
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavLinkClick("home");
+              }}
+              className="flex items-center"
+            >
+              <img src={logoImg} alt="PurePoint Cleaning Logo" className="h-10 mr-2" />
+              <div className="text-2xl font-bold">
+                <span className="text-primary">Pure</span>
+                <span className="text-secondary">Point</span>
+              </div>
+            </a>
           </div>
           
           {/* Desktop Navigation */}
