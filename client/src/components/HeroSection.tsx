@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col justify-center pt-24"
+      className="relative min-h-screen flex flex-col justify-center pt-32 md:pt-40"
     >
       {/* Background with gradient overlay - JaniKing style */}
       <div className="absolute inset-0 z-0">
@@ -104,8 +104,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      
-      {/* Removed scroll indicator arrow as requested */}
     </section>
   );
 }
