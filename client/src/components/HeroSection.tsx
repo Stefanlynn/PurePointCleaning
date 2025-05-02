@@ -57,12 +57,14 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <button
-            onClick={() => scrollToSection("contact")}
-            className="inline-block bg-secondary hover:bg-accent-dark text-primary font-bold py-4 px-8 rounded transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
-          >
-            Request a Free Quote
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="inline-block bg-secondary hover:bg-accent-dark text-primary font-bold py-4 px-8 rounded transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+            >
+              Get a Free Quote
+            </button>
+          </div>
         </div>
         
         {/* Right side callout - JaniKing inspired - Visible on both desktop and mobile */}
