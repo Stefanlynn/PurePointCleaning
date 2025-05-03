@@ -1,4 +1,5 @@
 import { useContactForm } from "@/hooks/use-contact-form";
+import { cleaningTeamImage } from '../assets/index';
 
 export default function ContactSection() {
   const { formData, handleChange, handleSubmit, isSubmitting } = useContactForm();
@@ -16,11 +17,12 @@ export default function ContactSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          <div className="lg:w-1/2 rounded-lg overflow-hidden">
+          <div className="lg:w-1/2 rounded-lg overflow-hidden relative">
+            <div className="absolute inset-0 bg-black opacity-30 z-10 rounded-lg"></div>
             <img
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=600"
-              alt="Professional cleaning team"
-              className="w-full h-full object-cover"
+              src={cleaningTeamImage}
+              alt="Professional cleaning team working in a modern living room"
+              className="w-full h-full object-cover relative"
               width="800"
               height="600"
             />
