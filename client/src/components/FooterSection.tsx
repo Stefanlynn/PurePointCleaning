@@ -52,6 +52,7 @@ export default function FooterSection() {
             <div className="text-2xl font-bold mb-4">
               <span className="text-white">Pure</span>
               <span className="text-secondary">Point</span>
+              <span className="text-white font-medium ml-1">Cleaning</span>
             </div>
             <p className="text-white/70 max-w-md">
               Professional commercial cleaning services for businesses across the Atlanta Metro area.
