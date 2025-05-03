@@ -77,7 +77,7 @@ import { scrollToSection } from "@/lib/utils";
 
 export default function GuaranteeSection() {
   return (
-    <section id="guarantee" className="py-20 bg-white relative">
+    <section id="guarantee" className="py-20 pb-10 bg-white relative">
       {/* Price Match Badge - Floating position similar to JaniKing style */}
       <div className="absolute -top-16 right-0 left-0 mx-auto w-64 md:w-80 md:right-20 md:left-auto z-10">
         <div className="bg-secondary text-primary rounded-full transform rotate-6 shadow-xl border-4 border-white">
@@ -148,7 +148,7 @@ export default function GuaranteeSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-6 md:mb-16">
           {guarantees.slice(1).map((guarantee, index) => (
             <div key={index} className="bg-neutral-lightest rounded-lg shadow-md p-6 flex items-start gap-6 hover:shadow-lg transition-all duration-300">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">

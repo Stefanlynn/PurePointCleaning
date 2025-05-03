@@ -5,10 +5,10 @@ export default function ContactSection() {
   const { formData, handleChange, handleSubmit, isSubmitting } = useContactForm();
 
   return (
-    <section id="contact" className="pt-4 pb-10 md:py-20 bg-neutral-lightest">
+    <section id="contact" className="pt-0 pb-10 md:py-20 bg-neutral-lightest">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-4 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-1 md:mb-4 text-primary">
+        <div className="text-center mb-2 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-0 md:mb-4 text-primary">
             Let's Get Started
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
