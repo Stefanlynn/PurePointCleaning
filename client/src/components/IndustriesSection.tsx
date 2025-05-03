@@ -103,11 +103,11 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section id="industries" className="py-20 bg-primary relative">
+    <section id="industries" className="py-10 md:py-20 bg-primary relative">
       <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 95%)" }}></div>
       <div className="container mx-auto px-4 relative">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-4 text-white">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-3 md:mb-4 text-white">
             Who We Serve
           </h2>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">

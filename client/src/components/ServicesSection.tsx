@@ -215,10 +215,10 @@ import { scrollToSection } from "@/lib/utils";
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-4 text-primary">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-3 md:mb-4 text-primary">
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

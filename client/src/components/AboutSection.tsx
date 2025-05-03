@@ -2,9 +2,9 @@ import { cleaningCrewImage } from '../assets/index';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-neutral-lightest">
+    <section id="about" className="py-10 md:py-20 bg-neutral-lightest">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
           <div className="md:w-1/2 relative">
             <div className="absolute inset-0 bg-black opacity-30 rounded-lg z-10"></div>
             <img

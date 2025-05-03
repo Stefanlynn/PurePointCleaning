@@ -77,11 +77,11 @@ import { scrollToSection } from "@/lib/utils";
 
 export default function GuaranteeSection() {
   return (
-    <section id="guarantee" className="py-20 bg-white relative">
+    <section id="guarantee" className="py-10 md:py-20 bg-white relative">
       {/* Price Match Badge - Floating position similar to JaniKing style */}
-      <div className="absolute -top-16 right-0 left-0 mx-auto w-64 md:w-80 md:right-20 md:left-auto z-10">
+      <div className="absolute -top-12 md:-top-16 right-0 left-0 mx-auto w-60 md:w-80 md:right-20 md:left-auto z-10">
         <div className="bg-secondary text-primary rounded-full transform rotate-6 shadow-xl border-4 border-white">
-          <div className="text-center py-6 px-4">
+          <div className="text-center py-5 md:py-6 px-4">
             <div className="text-xl md:text-2xl font-bold">PRICE MATCH</div>
             <div className="font-bold text-sm md:text-base">GUARANTEE</div>
           </div>
@@ -89,8 +89,8 @@ export default function GuaranteeSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-0">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-4 text-primary">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold font-sans mb-3 md:mb-4 text-primary">
             Why Choose Us
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -99,12 +99,12 @@ export default function GuaranteeSection() {
         </div>
 
         {/* Featured Price Match Card - JaniKing inspired prominence */}
-        <div className="mb-12 mx-auto max-w-4xl">
+        <div className="mb-8 md:mb-12 mx-auto max-w-4xl">
           <div className="bg-primary rounded-lg shadow-2xl overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="md:w-1/3 bg-primary p-8 flex items-center justify-center">
+              <div className="md:w-1/3 bg-primary p-6 md:p-8 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-white/20 rounded-full flex items-center justify-center mb-3 md:mb-4 mx-auto">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-14 w-14 text-secondary"
