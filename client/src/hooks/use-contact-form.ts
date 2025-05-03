@@ -88,9 +88,10 @@ export const useContactForm = () => {
     return true;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
     if (!validateForm()) {
-      e.preventDefault();
       return;
     }
 
@@ -102,8 +103,33 @@ export const useContactForm = () => {
       description: "Thank you for contacting PurePoint Cleaning.",
     });
     
-    // Let the form submit naturally to Netlify
-    // No preventDefault() call to allow the native form submission
+    try {
+      // Encode the form data for Netlify
+      const formEncoded = new URLSearchParams();
+      Object.entries(formData).forEach(([key, value]) => {
+        formEncoded.append(key, value);
+      });
+      // Add the form name
+      formEncoded.append('form-name', 'contact');
+      
+      // Submit the form to Netlify
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formEncoded.toString()
+      });
+      
+      // Redirect to success page
+      window.location.href = '/success';
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error submitting form",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+    }
   };
 
   return {

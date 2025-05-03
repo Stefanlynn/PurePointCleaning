@@ -6,6 +6,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Redirect form submissions to success page
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
 # Redirect to home for SPA routing
 [[redirects]]
   from = "/*"
