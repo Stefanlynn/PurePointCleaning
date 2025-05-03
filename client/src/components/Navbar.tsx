@@ -91,29 +91,31 @@ export default function Navbar({ activeSection }: NavbarProps) {
             </div>
             
             {/* Desktop Navigation - Improved visibility */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={`#${link.href}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavLinkClick(link.href);
-                  }}
-                  className={`font-medium px-3 py-2 rounded-md transition duration-300 ${
-                    activeSection === link.href
-                      ? "text-white bg-primary"
-                      : "text-gray-700 hover:bg-primary/10 hover:text-primary"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ))}
+            <nav className="hidden md:flex items-center mr-4">
+              <div className="flex items-center space-x-0.5">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={`#${link.href}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavLinkClick(link.href);
+                    }}
+                    className={`font-medium px-2.5 py-2 rounded-md transition duration-300 ${
+                      activeSection === link.href
+                        ? "text-white bg-primary"
+                        : "text-gray-700 hover:bg-primary/10 hover:text-primary"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
               
               {/* Call to action button */}
               <button
                 onClick={() => scrollToSection("contact")}
-                className="ml-2 bg-secondary hover:bg-accent-dark text-primary-foreground px-4 py-2 rounded-md font-medium transition-all duration-300 flex items-center gap-2"
+                className="ml-4 bg-secondary hover:bg-accent-dark text-primary-foreground px-4 py-2 rounded-md font-medium transition-all duration-300 flex items-center gap-2"
               >
                 <span>Free Quote</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -161,7 +163,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
         
         {/* Mobile Horizontal Nav Tabs - directly under logo */}
         <div className="md:hidden w-full mt-1">
-          <div className="flex justify-between pb-1">
+          <div className="flex justify-center gap-1 pb-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
