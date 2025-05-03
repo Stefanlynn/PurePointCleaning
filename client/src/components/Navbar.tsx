@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { scrollToSection } from "@/lib/utils";
+import logoImage from "../assets/logo.png";
 
 interface NavbarProps {
   activeSection: string;
@@ -77,7 +78,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
             <div className="flex items-center gap-2 md:gap-3">
               {/* Company Logo */}
               <img 
-                src="/images/purepoint-logo.png" 
+                src={logoImage}
                 alt="PurePoint Cleaning Logo" 
                 className="w-12 h-12 md:w-14 md:h-14 object-contain" 
               />
