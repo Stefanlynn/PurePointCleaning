@@ -111,12 +111,7 @@ export default function HeroSection() {
           {/* Mobile Version - More compact */}
           <div className="md:hidden mt-8">
             <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-5">
-              <h2 className="text-xl font-bold text-primary mb-3 flex items-center">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center mr-2">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
+              <h2 className="text-xl font-bold text-primary mb-3">
                 Commercial Cleaning Specialists
               </h2>
               

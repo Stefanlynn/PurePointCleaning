@@ -70,16 +70,16 @@ export default function Navbar({ activeSection }: NavbarProps) {
       </div>
       
       {/* Main navigation */}
-      <div className={`border-b border-gray-200 ${scrolled ? "py-2" : "py-3"}`}>
+      <div className={`border-b border-gray-200 ${scrolled ? "py-1" : "py-2"}`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Logo Area with SVG logo */}
             <div className="flex items-center gap-3">
               {/* SVG Logo */}
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center">
                 <svg 
                   viewBox="0 0 24 24" 
-                  className="w-8 h-8 text-white" 
+                  className="w-6 h-6 md:w-8 md:h-8 text-white" 
                   fill="none" 
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -108,10 +108,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </div>
               <div>
                 <div className="font-bold leading-tight">
-                  <span className="text-primary text-xl">Pure</span>
-                  <span className="text-secondary text-xl">Point</span>
+                  <span className="text-primary text-lg md:text-xl">Pure</span>
+                  <span className="text-secondary text-lg md:text-xl">Point</span>
                 </div>
-                <div className="text-primary font-medium text-sm leading-tight">Cleaning Services</div>
+                <div className="text-primary font-medium text-xs md:text-sm leading-tight">Cleaning Services</div>
               </div>
             </div>
             
@@ -185,8 +185,8 @@ export default function Navbar({ activeSection }: NavbarProps) {
         </div>
         
         {/* Mobile Horizontal Nav Tabs - directly under logo */}
-        <div className="md:hidden w-full overflow-x-auto scrollbar-hide mt-2 px-2">
-          <div className="flex space-x-1 pb-2 min-w-max px-2">
+        <div className="md:hidden w-full mt-1">
+          <div className="flex justify-between pb-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -195,7 +195,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                   e.preventDefault();
                   handleNavLinkClick(link.href);
                 }}
-                className={`whitespace-nowrap font-medium px-3 py-1.5 rounded-md text-sm transition duration-300 ${
+                className={`whitespace-nowrap font-medium px-1.5 py-0.5 rounded text-xs transition duration-300 ${
                   activeSection === link.href
                     ? "text-white bg-primary"
                     : "text-gray-700 hover:bg-primary/10 hover:text-primary"
