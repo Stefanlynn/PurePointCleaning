@@ -118,20 +118,12 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </button>
             </nav>
             
-            {/* Mobile Controls */}
+            {/* Mobile Menu Controls */}
             <div className="md:hidden flex items-center gap-2">
-              {/* Free Quote Button - Positioned First */}
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
-              >
-                Free Quote
-              </button>
-              
-              {/* Menu Button - Positioned Second */}
+              {/* Menu Button - Positioned First */}
               <button
                 onClick={toggleMobileMenu}
-                className="text-primary focus:outline-none"
+                className="text-primary focus:outline-none mr-3"
                 aria-label="Toggle mobile menu"
               >
                 <svg
@@ -150,6 +142,14 @@ export default function Navbar({ activeSection }: NavbarProps) {
                       : "M4 8h16M4 16h16"}
                   />
                 </svg>
+              </button>
+              
+              {/* Quote button */}
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
+              >
+                Free Quote
               </button>
             </div>
           </div>
