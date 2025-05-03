@@ -5,11 +5,12 @@ export default function AboutSection() {
     <section id="about" className="py-20 bg-neutral-lightest">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 relative">
+            <div className="absolute inset-0 bg-black opacity-30 rounded-lg z-10"></div>
             <img
               src={cleaningCrewImage}
               alt="Professional cleaning crew high-fiving"
-              className="rounded-lg shadow-lg w-full h-auto"
+              className="rounded-lg shadow-lg w-full h-auto relative"
               width="800"
               height="600"
             />
