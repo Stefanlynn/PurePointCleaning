@@ -80,14 +80,14 @@ export default function Navbar({ activeSection }: NavbarProps) {
               <img 
                 src={logoImage}
                 alt="PurePoint Cleaning Logo" 
-                className="w-12 h-12 md:w-14 md:h-14 object-contain" 
+                className="w-16 h-16 md:w-20 md:h-20 object-contain -mt-2 -mb-2" 
               />
-              <div>
+              <div className="flex flex-col justify-center">
                 <div className="font-bold leading-tight">
-                  <span className="text-primary text-lg md:text-xl">Pure</span>
-                  <span className="text-secondary text-lg md:text-xl">Point</span>
+                  <span className="text-primary text-lg md:text-2xl">Pure</span>
+                  <span className="text-secondary text-lg md:text-2xl">Point</span>
                 </div>
-                <div className="text-primary font-medium text-sm md:text-base leading-tight">Cleaning</div>
+                <div className="text-primary font-medium text-sm md:text-xl leading-tight">Cleaning</div>
               </div>
             </div>
             
