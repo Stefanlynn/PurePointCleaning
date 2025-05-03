@@ -31,9 +31,13 @@ export default function ContactSection() {
           <div className="lg:w-1/2">
             <form
               id="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
               className="bg-white rounded-lg shadow-lg p-8"
               onSubmit={handleSubmit}
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label 

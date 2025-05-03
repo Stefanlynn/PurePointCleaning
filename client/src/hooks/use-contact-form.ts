@@ -89,33 +89,22 @@ export const useContactForm = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
     if (!validateForm()) {
+      e.preventDefault();
       return;
     }
 
     setIsSubmitting(true);
-
-    try {
-      await apiRequest("POST", "/api/contact", formData);
-      
-      toast({
-        title: "Thank you for your inquiry!",
-        description: "We will get back to you within 24 hours.",
-      });
-      
-      setFormData(initialFormData);
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again later or contact us directly.",
-        variant: "destructive",
-      });
-      console.error("Form submission error:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    // Let Netlify handle the form submission natively
+    // The form will submit naturally to Netlify's default thank-you page
+    toast({
+      title: "Submitting your request...",
+      description: "Thank you for contacting PurePoint Cleaning.",
+    });
+    
+    // The form will naturally submit, and Netlify will handle the rest
+    // No need to call preventDefault() or manually submit the form
   };
 
   return {
