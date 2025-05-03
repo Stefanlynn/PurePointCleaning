@@ -34,10 +34,15 @@ export default function ContactSection() {
               name="contact"
               method="POST"
               data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/success"
               className="bg-white rounded-lg shadow-lg p-8"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
+              <p style={{ display: 'none' }}>
+                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label 

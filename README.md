@@ -54,9 +54,30 @@ To start the development server:
 npm run dev
 ```
 
-## Forms
+## Forms Configuration for Netlify
 
-The contact form is configured to work with Netlify Forms. Form submissions can be viewed in the Netlify dashboard under the "Forms" tab.
+The website uses Netlify Forms for handling contact form submissions:
+
+1. **Hidden Form Detection**
+   - There are two hidden forms in `client/index.html` for Netlify to detect during the build process.
+   - One form matches the main contact form fields, and one is a simplified version for backup.
+
+2. **React Form Implementation**
+   - The contact form in `components/ContactSection.tsx` includes all required Netlify attributes.
+   - Form submissions are handled via JavaScript with proper encoding.
+   - The system also includes a backup approach with direct HTML form submission.
+
+3. **Success & Error Handling**
+   - Custom success page at `/success.html` and proper redirects in `netlify.toml`.
+   - Multiple submission methods ensure the form works in all scenarios.
+
+4. **Form Security**
+   - Honeypot fields for spam protection.
+   - Form validation both client-side and server-side.
+
+Form submissions can be viewed in the Netlify dashboard under the "Forms" tab.
+
+**Important:** After deploying to Netlify, make one test submission to ensure forms are working correctly.
 
 ## Contact
 
