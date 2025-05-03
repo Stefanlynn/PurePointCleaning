@@ -1,0 +1,13 @@
+[build]
+  base = "client"
+  command = "cd .. && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirect to home for SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
