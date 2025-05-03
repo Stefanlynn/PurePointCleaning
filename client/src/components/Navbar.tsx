@@ -118,9 +118,9 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </button>
             </nav>
             
-            {/* Mobile Navigation - Horizontal Scrollable Tabs */}
+            {/* Mobile Menu Controls */}
             <div className="md:hidden flex items-center">
-              {/* Mobile Navigation Button - Always visible for expanded menu */}
+              {/* Menu Button */}
               <button
                 onClick={toggleMobileMenu}
                 className="text-primary focus:outline-none mr-3"
@@ -144,7 +144,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                 </svg>
               </button>
               
-              {/* Quote button always visible on mobile too */}
+              {/* Quote button */}
               <button
                 onClick={() => scrollToSection("contact")}
                 className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
@@ -182,20 +182,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
       {/* Mobile Expanded Menu Panel */}
       <div
         className={`mobile-menu md:hidden bg-white shadow-lg absolute w-full transition-all duration-300 ease-in-out z-50 ${
-          mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          mobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
         <div className="container mx-auto px-4 py-4 space-y-3">
-          {/* Contact info shown in expanded menu */}
-          <div className="flex justify-center">
-            <div className="flex items-center gap-2 text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span className="text-sm">Laure@purepointcleaning.com</span>
-            </div>
-          </div>
-          
           {/* Price Match Banner */}
           <div className="bg-primary/10 rounded-md p-3 flex items-center gap-3 border border-primary/20">
             <div className="text-secondary">
@@ -207,6 +197,19 @@ export default function Navbar({ activeSection }: NavbarProps) {
               <h3 className="text-primary font-bold">Price Match Guarantee</h3>
               <p className="text-xs text-gray-600">We'll beat any competitor's price!</p>
             </div>
+          </div>
+          
+          {/* Contact Info - Full Details */}
+          <div className="flex justify-center mb-1">
+            <a 
+              href="mailto:Laure@purepointcleaning.com" 
+              className="text-primary font-medium text-sm flex items-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>Laure@purepointcleaning.com</span>
+            </a>
           </div>
           
           <button
