@@ -19,11 +19,6 @@ export default function HeroSection() {
       {/* Content Grid - JaniKing inspired layout */}
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 items-center py-20 relative z-20">
         <div className="text-white">
-          <div className="mb-3">
-            <span className="text-white text-3xl md:text-4xl font-bold">Pure</span>
-            <span className="text-secondary text-3xl md:text-4xl font-bold">Point</span>
-            <span className="text-white text-3xl md:text-4xl font-bold"> Cleaning</span>
-          </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-sans leading-tight mb-6">
             Let Us Help Your Business Shine
           </h1>
