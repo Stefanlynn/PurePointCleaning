@@ -85,10 +85,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
             </div>
             
             {/* Mobile Free Quote Button - Center */}
-            <div className="md:hidden">
+            <div className="md:hidden flex justify-center items-center">
               <button
                 onClick={() => scrollToSection("contact")}
-                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
+                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300 mx-auto"
               >
                 Get a Free Quote
               </button>
