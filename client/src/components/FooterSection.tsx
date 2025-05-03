@@ -80,6 +80,18 @@ export default function FooterSection() {
             </div>
 
             <div>
+              <h3 className="text-lg font-bold mb-4">Contact</h3>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-white/70">Laure@purepointcleaning.com</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
               <h3 className="text-lg font-bold mb-4">Legal</h3>
               <ul className="space-y-2">
                 {legalLinks.map((link, index) => (
