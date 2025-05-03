@@ -162,39 +162,7 @@ export default function GuaranteeSection() {
           ))}
         </div>
 
-        <div className="flex justify-center">
-          <div className="relative overflow-hidden bg-neutral-lightest rounded-lg p-8 max-w-4xl border border-gray-200 shadow-lg">
-            <div className="absolute top-0 right-0 w-32 h-32 transform translate-x-16 -translate-y-16 bg-primary/10 rounded-full"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 transform -translate-x-16 translate-y-16 bg-secondary/10 rounded-full"></div>
 
-            <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10 relative">
-              <img
-                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&h=400"
-                alt="Satisfied client"
-                className="w-24 h-24 rounded-full object-cover"
-              />
-
-              <div>
-                <svg
-                  className="w-10 h-10 text-secondary mb-2"
-                  fill="currentColor"
-                  viewBox="0 0 32 32"
-                >
-                  <path d="M10 8c-2.209 0-4 1.791-4 4v10c0 2.209 1.791 4 4 4h10c2.209 0 4-1.791 4-4v-10c0-2.209-1.791-4-4-4h-10zM2 4v10c0 1.1.9 2 2 2h2v-4c0-3.313 2.687-6 6-6h4v-2c0-1.1-.9-2-2-2h-10c-1.1 0-2 .9-2 2z"></path>
-                </svg>
-
-                <p className="text-lg italic text-gray-700 mb-4">
-                  PurePoint Cleaning has transformed our office space. Their attention to detail and consistent quality make a real difference for our team and clients. The price match guarantee gave us the best value, and the photo documentation gives us peace of mind that everything's been thoroughly cleaned.
-                </p>
-
-                <div>
-                  <p className="font-bold">Sarah Johnson</p>
-                  <p className="text-gray-600">Office Manager, Atlanta Tech Solutions</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
