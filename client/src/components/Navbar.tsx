@@ -73,39 +73,14 @@ export default function Navbar({ activeSection }: NavbarProps) {
       <div className={`border-b border-gray-200 ${scrolled ? "py-1" : "py-2"}`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Logo Area with SVG logo */}
-            <div className="flex items-center gap-3">
-              {/* SVG Logo */}
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center">
-                <svg 
-                  viewBox="0 0 24 24" 
-                  className="w-6 h-6 md:w-8 md:h-8 text-white" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    d="M4 7h16M4 12h16M4 17h12" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                  />
-                  <path 
-                    d="M8 20.01l.01-.011M12 20.01l.01-.011M16 20.01l.01-.011" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                  />
-                  <path 
-                    d="M12 4v2" 
-                    stroke="currentColor" 
-                    strokeWidth="2.5" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                  />
-                </svg>
-              </div>
+            {/* Logo Area with Shield logo */}
+            <div className="flex items-center gap-2 md:gap-3">
+              {/* Company Logo */}
+              <img 
+                src="/images/purepoint-logo.png" 
+                alt="PurePoint Cleaning Logo" 
+                className="w-12 h-12 md:w-14 md:h-14 object-contain" 
+              />
               <div>
                 <div className="font-bold leading-tight">
                   <span className="text-primary text-lg md:text-xl">Pure</span>
