@@ -26,9 +26,6 @@ export default function AboutSection() {
               <p>
                 Our price match guarantee means we'll beat any competitor's price—no questions asked. And our unique closeout process ensures every job is completed thoroughly, with photo documentation of each room after every visit.
               </p>
-              <p className="font-medium">
-                At PurePoint, we don't just clean spaces—we build trust.
-              </p>
             </div>
           </div>
         </div>
