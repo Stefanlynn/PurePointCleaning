@@ -6,14 +6,9 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex flex-col justify-center pt-32 md:pt-40"
     >
-      {/* Background with gradient overlay - JaniKing style */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1623861397340-903fd08650ec?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1920&h=1080" 
-          alt="Commercial Cleaning" 
-          className="w-full h-full object-cover object-center"
-        />
+      {/* Solid background with gradient */}
+      <div className="absolute inset-0 z-0 bg-primary">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary-dark/80 z-10"></div>
       </div>
 
       {/* Content Grid - JaniKing inspired layout */}

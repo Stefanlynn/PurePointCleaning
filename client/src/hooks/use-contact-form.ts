@@ -88,56 +88,22 @@ export const useContactForm = () => {
     return true;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+  const handleSubmit = (e: React.FormEvent) => {
     if (!validateForm()) {
+      e.preventDefault();
       return;
     }
 
     setIsSubmitting(true);
     
-    // Use Fetch API for Netlify form submission
-    try {
-      const formElement = e.target as HTMLFormElement;
-      const formData = new FormData(formElement);
-      
-      // Use URLSearchParams for compatibility
-      const urlEncodedData = new URLSearchParams();
-      for (const pair of formData.entries()) {
-        urlEncodedData.append(pair[0], pair[1] as string);
-      }
-      
-      // Send the form data to Netlify
-      const response = await fetch("/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: urlEncodedData.toString(),
-      });
-      
-      // Check if the submission was successful
-      if (response.ok) {
-        toast({
-          title: "Form submitted successfully!",
-          description: "Thank you for contacting PurePoint Cleaning. We'll be in touch soon.",
-        });
-        // Reset the form after successful submission
-        setFormData(initialFormData);
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or contact us directly via email.",
-        variant: "destructive",
-      });
-      console.error("Form submission error:", error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Show a toast notification
+    toast({
+      title: "Submitting your request...",
+      description: "Thank you for contacting PurePoint Cleaning.",
+    });
+    
+    // Let the form submit naturally to Netlify
+    // No preventDefault() call to allow the native form submission
   };
 
   return {
