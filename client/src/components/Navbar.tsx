@@ -87,7 +87,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                   <span className="text-primary text-lg md:text-xl">Pure</span>
                   <span className="text-secondary text-lg md:text-xl">Point</span>
                 </div>
-                <div className="text-primary font-medium text-xs md:text-sm leading-tight">Cleaning Services</div>
+                <div className="text-primary font-medium text-sm md:text-base leading-tight">Cleaning</div>
               </div>
             </div>
             
