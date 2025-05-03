@@ -9,6 +9,43 @@ This is the official website for PurePoint Cleaning, a commercial cleaning compa
 - Tailwind CSS
 - Vite (as build tool)
 
+## Deployment Instructions for Netlify via GitHub
+
+### 1. Set up the GitHub Repository
+
+1. Create a new repository on GitHub
+2. Push this code to the repository:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin [your-github-repo-url]
+git push -u origin main
+```
+
+### 2. Connect to Netlify
+
+1. Log in to your Netlify account
+2. Click "Add new site" > "Import an existing project"
+3. Select GitHub and authorize Netlify
+4. Select your repository
+
+### 3. Configure the Build Settings
+
+Netlify should automatically detect the settings from the `netlify.toml` file, but you can verify them:
+
+- Build command: `npm run build`
+- Publish directory: `dist/public`
+- Base directory: `.` (root of the project)
+
+### 4. Deploy the Site
+
+1. Click "Deploy site"
+2. Netlify will build and deploy your site
+3. Once complete, you can set up a custom domain in site settings
+
 ## Development
 
 To start the development server:
@@ -17,36 +54,9 @@ To start the development server:
 npm run dev
 ```
 
-## Building for Production
+## Forms
 
-To build the project for production:
-
-```bash
-npm run build
-```
-
-This will generate static files in the `dist/public` directory.
-
-## Deployment with Netlify
-
-This project is configured for easy deployment on Netlify.
-
-### Automatic Deployment (Recommended)
-
-1. Push your code to a GitHub repository.
-2. Connect your GitHub repository to Netlify.
-3. Netlify will automatically detect the build settings from the `netlify.toml` file.
-
-### Manual Deployment
-
-If you prefer to manually deploy:
-
-1. Build the project with `npm run build`
-2. Drag and drop the `dist/public` folder to Netlify's manual deploy area.
-
-## Environment Variables
-
-No special environment variables are required for this project.
+The contact form is configured to work with Netlify Forms. Form submissions can be viewed in the Netlify dashboard under the "Forms" tab.
 
 ## Contact
 
