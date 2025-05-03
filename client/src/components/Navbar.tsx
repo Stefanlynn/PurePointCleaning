@@ -68,20 +68,30 @@ export default function Navbar({ activeSection }: NavbarProps) {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Logo Area with Shield logo */}
-            <div className="flex items-center gap-2 md:gap-3">
-              {/* Company Logo */}
+            <div className="flex items-center">
+              {/* Company Logo Only */}
               <img 
                 src={logoImage}
                 alt="PurePoint Cleaning Logo" 
                 className="w-16 h-16 md:w-20 md:h-20 object-contain -mt-2 -mb-2" 
               />
-              <div className="flex flex-col justify-center">
+              <div className="hidden md:flex flex-col justify-center ml-2">
                 <div className="font-bold leading-tight">
                   <span className="text-primary text-lg md:text-2xl">Pure</span>
                   <span className="text-secondary text-lg md:text-2xl">Point</span>
                 </div>
                 <div className="text-primary font-medium text-sm md:text-xl leading-tight">Cleaning</div>
               </div>
+            </div>
+            
+            {/* Mobile Free Quote Button - Center */}
+            <div className="md:hidden">
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
+              >
+                Free Quote
+              </button>
             </div>
             
             {/* Desktop Navigation - Improved visibility */}
@@ -118,12 +128,11 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </button>
             </nav>
             
-            {/* Mobile Menu Controls */}
-            <div className="md:hidden flex items-center gap-2">
-              {/* Menu Button - Positioned First */}
+            {/* Mobile Menu Toggle - Right */}
+            <div className="md:hidden">
               <button
                 onClick={toggleMobileMenu}
-                className="text-primary focus:outline-none mr-3"
+                className="text-primary focus:outline-none"
                 aria-label="Toggle mobile menu"
               >
                 <svg
@@ -142,14 +151,6 @@ export default function Navbar({ activeSection }: NavbarProps) {
                       : "M4 8h16M4 16h16"}
                   />
                 </svg>
-              </button>
-              
-              {/* Quote button */}
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
-              >
-                Free Quote
               </button>
             </div>
           </div>
