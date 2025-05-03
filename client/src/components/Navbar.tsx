@@ -65,7 +65,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
             onClick={() => scrollToSection("contact")}
             className="text-sm font-medium bg-secondary hover:bg-accent-dark px-4 py-1 rounded text-primary font-bold transition-all duration-300"
           >
-            Get a Free Quote Today
+            Free Quote
           </button>
         </div>
       </div>
@@ -114,9 +114,9 @@ export default function Navbar({ activeSection }: NavbarProps) {
               {/* Call to action button */}
               <button
                 onClick={() => scrollToSection("contact")}
-                className="ml-2 bg-secondary hover:bg-accent-dark text-primary-foreground px-5 py-2 rounded-md font-medium transition-all duration-300 flex items-center gap-2"
+                className="ml-2 bg-secondary hover:bg-accent-dark text-primary-foreground px-4 py-2 rounded-md font-medium transition-all duration-300 flex items-center gap-2"
               >
-                <span>Get a Free Quote</span>
+                <span>Free Quote</span>
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -154,7 +154,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
                 onClick={() => scrollToSection("contact")}
                 className="bg-secondary hover:bg-accent-dark text-primary-foreground px-3 py-1.5 rounded-md font-medium text-sm transition-all duration-300"
               >
-                Get a Free Quote
+                Free Quote
               </button>
             </div>
           </div>
@@ -227,7 +227,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
             }}
             className="w-full bg-secondary hover:bg-accent-dark text-primary font-bold px-5 py-3 rounded-md transition-all duration-300 flex items-center justify-center gap-2"
           >
-            <span>Get Your Free Quote</span>
+            <span>Free Quote</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
