@@ -5,9 +5,9 @@ export default function AboutSection() {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=600"
-              alt="Professional cleaning staff"
-              className="rounded-lg shadow-lg"
+              src="/src/assets/cleaning-crew-highfive.jpg"
+              alt="Professional cleaning crew high-fiving"
+              className="rounded-lg shadow-lg w-full h-auto"
               width="800"
               height="600"
             />
