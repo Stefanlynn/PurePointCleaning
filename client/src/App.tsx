@@ -8,6 +8,8 @@ import Home from "@/pages/Home";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import FAQ from "@/pages/FAQ";
+import Success from "@/pages/Success";
+import SimpleContactForm from "@/components/SimpleContactForm";
 
 function Router() {
   return (
@@ -16,6 +18,8 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-of-service" component={TermsOfService} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/success" component={Success} />
+      <Route path="/thanks" component={Success} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
@@ -28,6 +32,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <SimpleContactForm />
       </TooltipProvider>
     </QueryClientProvider>
   );

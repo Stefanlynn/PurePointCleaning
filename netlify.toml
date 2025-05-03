@@ -6,13 +6,25 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Redirect form submissions to success page
+# Redirect for 404 page
+[[redirects]]
+  from = "/404"
+  to = "/404.html"
+  status = 404
+
+# Redirect for success page
 [[redirects]]
   from = "/success"
   to = "/success.html"
   status = 200
 
-# Redirect to home for SPA routing
+# Form submission success redirect
+[[redirects]]
+  from = "/thanks"
+  to = "/success.html"
+  status = 200
+
+# Redirect to home for SPA routing (must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -23,3 +35,7 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+
+# Form handler options
+[build.processing.html]
+  pretty_urls = true

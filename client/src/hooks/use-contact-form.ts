@@ -104,23 +104,53 @@ export const useContactForm = () => {
     });
     
     try {
+      // Get the form element from the event
+      const form = e.target as HTMLFormElement;
+      
       // Encode the form data for Netlify
       const formEncoded = new URLSearchParams();
+      
+      // Add all form data
       Object.entries(formData).forEach(([key, value]) => {
         formEncoded.append(key, value);
       });
+      
       // Add the form name
       formEncoded.append('form-name', 'contact');
       
+      // Add bot-field honeypot (will be empty for real users)
+      formEncoded.append('bot-field', '');
+      
+      // Log form data for debugging (remove in production)
+      console.log('Submitting form data:', Object.fromEntries(formEncoded));
+      
       // Submit the form to Netlify
-      await fetch('/', {
+      const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: { 
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
         body: formEncoded.toString()
       });
       
-      // Redirect to success page
-      window.location.href = '/success';
+      // Check if successful
+      if (response.ok) {
+        console.log('Form submitted successfully');
+        
+        // Reset form
+        setFormData(initialFormData);
+        
+        // Show success notification
+        toast({
+          title: "Form submitted successfully!",
+          description: "We'll be in touch with you shortly.",
+        });
+        
+        // Redirect to success page
+        window.location.href = '/success';
+      } else {
+        throw new Error(`Form submission failed: ${response.status} ${response.statusText}`);
+      }
     } catch (error) {
       console.error('Form submission error:', error);
       toast({
