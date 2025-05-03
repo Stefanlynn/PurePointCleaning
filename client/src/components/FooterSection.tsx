@@ -24,6 +24,7 @@ export default function FooterSection() {
         <div className="mt-4 pt-4 border-t border-white/10 text-center flex justify-between items-center flex-col md:flex-row">
           <p className="text-white text-sm">© 2025 PurePoint Cleaning. All rights reserved.</p>
           <div className="flex space-x-4 mt-2 md:mt-0 text-sm">
+            <Link href="/faq" className="text-white hover:text-secondary transition duration-300">FAQ</Link>
             <Link href="/privacy-policy" className="text-white hover:text-secondary transition duration-300">Privacy Policy</Link>
             <Link href="/terms-of-service" className="text-white hover:text-secondary transition duration-300">Terms of Service</Link>
           </div>
