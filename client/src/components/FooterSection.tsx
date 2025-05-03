@@ -45,7 +45,7 @@ export default function FooterSection() {
   ];
 
   return (
-    <footer className="bg-neutral-dark text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
@@ -54,7 +54,7 @@ export default function FooterSection() {
               <span className="text-secondary">Point</span>
               <span className="text-white font-medium ml-1">Cleaning</span>
             </div>
-            <p className="text-white/70 max-w-md">
+            <p className="text-white max-w-md">
               Professional commercial cleaning services for businesses across the Atlanta Metro area.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function FooterSection() {
                         e.preventDefault();
                         scrollToSection(link.href);
                       }}
-                      className="text-white/70 hover:text-white transition duration-300"
+                      className="text-white hover:text-secondary transition duration-300"
                     >
                       {link.label}
                     </a>
@@ -87,7 +87,7 @@ export default function FooterSection() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span className="text-white/70">Laure@purepointcleaning.com</span>
+                  <span className="text-white">Laure@purepointcleaning.com</span>
                 </li>
               </ul>
             </div>
@@ -99,7 +99,7 @@ export default function FooterSection() {
                   <li key={index}>
                     <a
                       href={link.href}
-                      className="text-white/70 hover:text-white transition duration-300"
+                      className="text-white hover:text-secondary transition duration-300"
                     >
                       {link.label}
                     </a>
@@ -115,7 +115,7 @@ export default function FooterSection() {
                   <a
                     key={index}
                     href={link.href}
-                    className="text-white/70 hover:text-white transition duration-300"
+                    className="text-white hover:text-secondary transition duration-300"
                     aria-label={link.label}
                   >
                     {link.icon}
@@ -127,7 +127,7 @@ export default function FooterSection() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center">
-          <p className="text-white/70">© 2025 PurePoint Cleaning. All rights reserved.</p>
+          <p className="text-white">© 2025 PurePoint Cleaning. All rights reserved.</p>
         </div>
       </div>
     </footer>
