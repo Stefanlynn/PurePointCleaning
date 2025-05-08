@@ -1,0 +1,55 @@
+Please help me update my existing React + Vite site hosted on Netlify at https://purepointcleaning.netlify.app based on the following changes:
+	1.	Trust Section / Licensing Info:
+
+	•	Add a section titled “Trusted & Covered” or “Peace of Mind Guaranteed”
+	•	Include clear text: “We are licensed, bonded, and fully insured for your protection.”
+	•	Add 3 simple trust badges/icons for: Licensed, Bonded, Insured
+	•	Mention: “We offer a 100% satisfaction guarantee on all services.”
+
+	2.	Hero Section Enhancements:
+
+	•	Update the headline and subheadline to be bolder, more professional, and commercial-focused.
+	•	Example headline: “Professional Commercial Cleaning You Can Count On”
+	•	Example sub: “With decades of combined experience, our team delivers top-tier service for businesses that expect the best.”
+	•	Replace any images that look residential with more commercial cleaning visuals (offices, lobbies, conference rooms)
+
+	3.	Experience Statement:
+
+	•	Somewhere near the About or Hero section, add this sentence:
+“With cleaners who bring decades of experience, we believe top-notch talent should care for top-notch customers.”
+
+	4.	FAQ Section Reordering:
+
+	•	Move current FAQ number 5 to be the first question
+
+	5.	Service List Update:
+
+	•	In the Services section, reorder items as follows:
+	•	Offices
+	•	Churches
+	•	Event Spaces
+	•	Public Businesses
+	•	Clothing Stores (last)
+
+	6.	100-Point Inspection Statement:
+
+	•	In the Services or “Why Choose Us” section, include a line that says:
+“Every clean includes a 100-point inspection to ensure unmatched quality and service.”
+
+	7.	Form Submission:
+
+	•	Update the contact form so the response email goes to the new main email (not Tres’)
+	•	Set a custom confirmation message to show after submitting the form, like:
+“Thank you! Your request has been received. We’ll be in touch shortly to schedule your service.”
+
+	8.	Add a “What Makes Us Different” Page (or Section):
+
+	•	Create a new page or section titled “What Makes Us Different”
+	•	Include bullet points like:
+	•	Price Match Guarantee
+	•	Detailed Closeout Process with Photo Documentation
+	•	Licensed, Bonded & Insured
+	•	100-Point Post-Clean Inspection
+	•	Decades of Combined Experience
+
+Keep all visual styling and structure consistent with the rest of the site.
