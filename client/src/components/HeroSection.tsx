@@ -22,7 +22,7 @@ export default function HeroSection() {
       >
         {/* Video Background with Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black/75 z-10"></div>
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <div className="relative w-full h-full">
               <iframe 
