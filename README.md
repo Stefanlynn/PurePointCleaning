@@ -81,4 +81,4 @@ Form submissions can be viewed in the Netlify dashboard under the "Forms" tab.
 
 ## Contact
 
-For any inquiries about this website, please contact: Laure@purepointcleaning.com
+For any inquiries about this website, please contact: Info@purepointcleaning.com
