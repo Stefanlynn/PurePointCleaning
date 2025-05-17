@@ -8,8 +8,8 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "What types of businesses do you serve?",
-      answer: "We clean everything from offices and churches to retail stores and event spaces."
+      question: "Do you offer a price match guarantee?",
+      answer: "Yes. We'll beat any competitor's price—no questions asked."
     },
     {
       question: "Do you bring your own supplies and equipment?",
@@ -24,8 +24,8 @@ export default function FAQ() {
       answer: "Absolutely! We offer flexible scheduling tailored to your business needs."
     },
     {
-      question: "Do you offer a price match guarantee?",
-      answer: "Yes. We'll beat any competitor's price—no questions asked."
+      question: "What types of businesses do you serve?",
+      answer: "We clean everything from offices and churches to retail stores and event spaces."
     },
     {
       question: "Are you insured?",
