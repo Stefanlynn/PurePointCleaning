@@ -52,13 +52,27 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="flex justify-center md:justify-start">
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="inline-block bg-secondary hover:bg-accent-dark text-primary font-bold py-4 px-8 rounded transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
-            >
-              Get a Free Quote
-            </button>
+          <div className="space-y-4">
+            <div className="flex justify-center md:justify-start">
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="inline-block bg-secondary hover:bg-accent-dark text-primary font-bold py-4 px-8 rounded transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-lg"
+              >
+                Get a Free Quote
+              </button>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm py-3 px-4 rounded-md border border-secondary/30 text-center md:text-left">
+              <div className="flex items-center gap-2 mb-1 justify-center md:justify-start">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span className="font-semibold text-secondary">Quick Quote by Text</span>
+              </div>
+              <p className="text-sm text-white">
+                Get a free quote instantly — just text <span className="font-bold">'FREE QUOTE'</span> to <span className="font-bold text-secondary">+1 (470) 233-5603</span>
+              </p>
+            </div>
           </div>
         </div>
         
