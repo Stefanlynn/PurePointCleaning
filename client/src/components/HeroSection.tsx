@@ -96,7 +96,7 @@ export default function HeroSection() {
             
             {/* Contact card - hidden on mobile, visible on desktop */}
             <div className="hidden lg:block lg:col-span-2 relative z-20">
-              <div className="bg-white rounded-lg shadow-2xl p-6 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+              <div className="bg-white rounded-lg shadow-2xl p-6">
                 <h2 className="text-2xl font-bold text-primary mb-4 text-center">
                   Request a Free Quote
                 </h2>
@@ -237,9 +237,8 @@ export default function HeroSection() {
       <section className="bg-white py-8 lg:hidden relative">
         <div className="container mx-auto px-4">
           <div className="max-w-lg mx-auto">
-            <div className="relative transform -rotate-2">
-              <div className="absolute inset-0 bg-secondary/10 rounded-lg rotate-1"></div>
-              <div className="relative bg-white p-6 rounded-lg shadow-lg">
+            <div className="relative">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-100">
                 <h2 className="text-2xl font-bold text-primary mb-6 text-center">
                   Schedule A Service
                 </h2>
