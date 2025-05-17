@@ -200,9 +200,9 @@ export default function Navbar({ activeSection }: NavbarProps) {
           </div>
           
           {/* Contact Info - Full Details */}
-          <div className="flex justify-center mb-1">
+          <div className="flex flex-col space-y-2 mb-3">
             <a 
-              href="mailto:Laure@purepointcleaning.com" 
+              href="mailto:Info@purepointcleaning.com" 
               className="text-primary font-medium text-sm flex items-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -210,6 +210,18 @@ export default function Navbar({ activeSection }: NavbarProps) {
               </svg>
               <span>Info@purepointcleaning.com</span>
             </a>
+            
+            <div className="bg-primary/5 p-3 rounded-md border border-secondary/20">
+              <div className="flex items-center gap-2 mb-1">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span className="font-semibold text-primary text-sm">Quick Quote by Text</span>
+              </div>
+              <p className="text-xs text-gray-600">
+                Text <span className="font-bold">'FREE QUOTE'</span> to <span className="font-bold text-secondary whitespace-nowrap">+1 (470) 233-5603</span>
+              </p>
+            </div>
           </div>
           
           <button
