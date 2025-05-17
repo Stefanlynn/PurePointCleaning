@@ -74,10 +74,10 @@ export default function HeroSection() {
         {/* CTA Buttons - Centered with space between */}
         <div className="flex justify-center gap-4 md:gap-6">
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("about")}
             className="bg-secondary hover:bg-accent-dark text-primary font-bold py-3 px-6 md:py-4 md:px-8 rounded-md transition-all duration-300 shadow-md hover:shadow-xl"
           >
-            Get a Free Quote
+            Why Us
           </button>
           
           <button
