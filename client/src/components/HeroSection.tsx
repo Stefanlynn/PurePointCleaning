@@ -85,7 +85,7 @@ export default function HeroSection() {
               <span className="font-semibold text-secondary">Quick Quote by Text</span>
             </div>
             <p className="text-sm text-white">
-              Get a free quote instantly — just text <span className="font-bold">'FREE QUOTE'</span> to <span className="font-bold text-secondary">+1 (470) 233-5603</span>
+              Get a free quote instantly — just text <span className="font-bold">'FREE QUOTE'</span> to <span className="font-bold text-secondary whitespace-nowrap">+1 (470) 233-5603</span>
             </p>
           </div>
           
