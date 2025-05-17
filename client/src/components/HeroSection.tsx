@@ -20,18 +20,20 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
     >
       {/* Video Background with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-black/75 z-10"></div>
         <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
-          <iframe 
-            className="w-full h-full object-cover" 
-            src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" 
-            title="PurePoint Cleaning Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen
-            onLoad={() => setVideoLoaded(true)}
-          ></iframe>
+          <div className="relative w-full h-full">
+            <iframe 
+              className="absolute w-[300%] md:w-full h-full md:h-full left-1/2 top-0 -translate-x-1/2 md:translate-x-0 md:left-0 md:scale-100" 
+              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1" 
+              title="PurePoint Cleaning Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              onLoad={() => setVideoLoaded(true)}
+            ></iframe>
+          </div>
         </div>
       </div>
 
