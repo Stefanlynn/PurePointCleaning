@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import { cleaningCrewImage, cleaningTeamImage, cleaningCrewAltImage, cleaningTeamAltImage } from "@/assets";
 
 export type BlogPost = {
   id: string;
@@ -14,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     id: "why-clean-workspaces",
     title: "Why Clean Workspaces Are More Than Just Looks – The Business Impact of a Clean Environment",
     excerpt: "A clean space does more than sparkle—it speaks. Before your staff clock in or a client shakes your hand, your facility has already made its first impression.",
-    coverImage: "/blog-cover-1.jpg",
+    coverImage: cleaningCrewImage,
     content: `
       <h1>Why Clean Workspaces Are More Than Just Looks – The Business Impact of a Clean Environment</h1>
       
@@ -77,7 +78,7 @@ export const blogPosts: BlogPost[] = [
     id: "inside-the-closeout",
     title: "Inside the Closeout – Why Our Post-Clean Photo Process Sets Us Apart",
     excerpt: "You shouldn't have to wonder if your space was cleaned properly. At PurePoint Cleaning, we believe in trust through transparency.",
-    coverImage: "/blog-cover-2.jpg",
+    coverImage: cleaningTeamImage,
     content: `
       <h1>Inside the Closeout – Why Our Post-Clean Photo Process Sets Us Apart</h1>
       
@@ -120,7 +121,7 @@ export const blogPosts: BlogPost[] = [
     id: "choosing-the-right-company",
     title: "Choosing the Right Commercial Cleaning Company – 5 Questions to Ask",
     excerpt: "Hiring a cleaning company should bring peace of mind, not more headaches. Here are 5 essential questions to ask.",
-    coverImage: "/blog-cover-3.jpg",
+    coverImage: cleaningCrewAltImage,
     content: `
       <h1>Choosing the Right Commercial Cleaning Company – 5 Questions to Ask</h1>
       
@@ -160,7 +161,7 @@ export const blogPosts: BlogPost[] = [
     id: "tailoring-cleaning-services",
     title: "From Churches to Offices – How We Tailor Cleaning to Fit Every Space",
     excerpt: "Your space is unique. It has its own energy, flow, and foot traffic—and it deserves a cleaning approach that respects that.",
-    coverImage: "/blog-cover-4.jpg",
+    coverImage: cleaningTeamAltImage,
     content: `
       <h1>From Churches to Offices – How We Tailor Cleaning to Fit Every Space</h1>
       

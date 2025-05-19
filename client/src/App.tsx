@@ -9,6 +9,7 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import TermsOfService from "@/pages/TermsOfService";
 import FAQ from "@/pages/FAQ";
 import Success from "@/pages/Success";
+import Blog from "@/pages/Blog";
 import SimpleContactForm from "@/components/SimpleContactForm";
 
 function Router() {
@@ -20,6 +21,8 @@ function Router() {
       <Route path="/faq" component={FAQ} />
       <Route path="/success" component={Success} />
       <Route path="/thanks" component={Success} />
+      <Route path="/blog" component={Blog} />
+      <Route path="/blog/:id" component={Blog} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
