@@ -25,15 +25,17 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <div className="relative w-full h-full">
-              <iframe 
-                className="absolute w-[400%] md:w-[120%] h-full md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:-translate-x-1/2" 
-                src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&version=3&start=2&end=58" 
-                title="PurePoint Cleaning Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-                onLoad={() => setVideoLoaded(true)}
-              ></iframe>
+              <video 
+                className="absolute w-auto min-w-full min-h-full max-w-none object-cover left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" 
+                autoPlay
+                muted
+                loop
+                playsInline
+                onLoadedData={() => setVideoLoaded(true)}
+              >
+                <source src="/cleaning-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
