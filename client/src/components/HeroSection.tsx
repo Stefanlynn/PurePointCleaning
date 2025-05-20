@@ -25,15 +25,11 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <div className="relative w-full h-full">
-              <iframe 
-                className="absolute w-[400%] md:w-[120%] h-full md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:-translate-x-1/2" 
-                src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&version=3" 
-                title="Atlanta City Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
+              <div 
+                id="youtube-background"
+                className="absolute w-[400%] md:w-[120%] h-full md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:-translate-x-1/2"
                 onLoad={() => setVideoLoaded(true)}
-              ></iframe>
+              ></div>
             </div>
           </div>
         </div>
