@@ -20,27 +20,9 @@ export default function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
       >
-        {/* Video Background with Overlay */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="relative w-full h-full">
-              <video
-                className="absolute w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                onLoadedData={() => setVideoLoaded(true)}
-              >
-                <source 
-                  src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-9556-large.mp4" 
-                  type="video/mp4" 
-                />
-                Your browser does not support HTML5 video.
-              </video>
-            </div>
-          </div>
+        {/* Background with Overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-r from-primary to-primary-dark">
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
         </div>
 
         {/* Content Layout Container */}
