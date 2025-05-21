@@ -25,14 +25,20 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           <div className={`absolute inset-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}>
             <div className="relative w-full h-full">
-              <iframe 
-                className="absolute w-[400%] md:w-[120%] h-full md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:-translate-y-1/2 md:-translate-x-1/2"
-                src="https://www.youtube.com/embed/XEBQPhtAyJE?autoplay=1&mute=1&loop=1&playlist=XEBQPhtAyJE&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1"
-                title="Atlanta City Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <video
+                className="absolute w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                onLoadedData={() => setVideoLoaded(true)}
+              >
+                <source 
+                  src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-9556-large.mp4" 
+                  type="video/mp4" 
+                />
+                Your browser does not support HTML5 video.
+              </video>
             </div>
           </div>
         </div>
