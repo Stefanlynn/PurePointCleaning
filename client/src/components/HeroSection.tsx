@@ -39,32 +39,16 @@ export default function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
       >
-        {/* Video Background with Overlay and Crossfade */}
+        {/* Video Background with Simple Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          {/* First Video (starts with different section) */}
-          <div 
-            className={`absolute inset-0 transition-opacity duration-1000 ${activeVideoIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
-          >
+          {/* Single video with straightforward approach */}
+          <div className="absolute inset-0">
             <iframe 
               className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&start=10"
-              title="Atlanta City Video 1"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-          
-          {/* Second Video (same video but starts at different timestamp) */}
-          <div 
-            className={`absolute inset-0 transition-opacity duration-1000 ${activeVideoIndex === 1 ? 'opacity-100' : 'opacity-0'}`}
-          >
-            <iframe 
-              className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&start=60"
-              title="Atlanta City Video 2"
+              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&iv_load_policy=3"
+              title="Atlanta City Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
