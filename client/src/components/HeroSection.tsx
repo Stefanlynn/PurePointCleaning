@@ -5,12 +5,27 @@ import { useContactForm } from "@/hooks/use-contact-form";
 export default function HeroSection() {
   const { formData, handleChange, handleSubmit, isSubmitting } = useContactForm();
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-  const videoFadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [primaryVideo, setPrimaryVideo] = useState(true);
+  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+  const crossfadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Function to handle smooth crossfade between videos
-  const crossfadeToNextVideo = () => {
-    setActiveVideoIndex(prev => prev === 0 ? 1 : 0);
+  // Function to calculate how close to the end of the video we are
+  const checkVideoProgress = () => {
+    if (!videoRef1.current || !videoRef2.current) return;
+    
+    const activeVideo = primaryVideo ? videoRef1.current : videoRef2.current;
+    const inactiveVideo = primaryVideo ? videoRef2.current : videoRef1.current;
+    
+    // If we're within 1.5 seconds of the end of the video
+    if (activeVideo.duration - activeVideo.currentTime < 1.5) {
+      // Start the inactive video
+      inactiveVideo.currentTime = 0;
+      inactiveVideo.play();
+      
+      // Start crossfade
+      setPrimaryVideo(!primaryVideo);
+    }
   };
 
   useEffect(() => {
@@ -19,19 +34,17 @@ export default function HeroSection() {
       setVideoLoaded(true);
     }, 500);
     
-    // Set up interval for crossfading between videos
-    const interval = setInterval(() => {
-      crossfadeToNextVideo();
-    }, 40000); // Switch every 40 seconds (adjust as needed)
+    // Set up interval to check video progress
+    const progressInterval = setInterval(checkVideoProgress, 500);
     
     return () => {
       clearTimeout(timer);
-      clearInterval(interval);
-      if (videoFadeTimeoutRef.current) {
-        clearTimeout(videoFadeTimeoutRef.current);
+      clearInterval(progressInterval);
+      if (crossfadeTimeoutRef.current) {
+        clearTimeout(crossfadeTimeoutRef.current);
       }
     };
-  }, []);
+  }, [primaryVideo]);
 
   return (
     <>
@@ -39,22 +52,42 @@ export default function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
       >
-        {/* Video Background with HTML5 Video for perfect looping */}
+        {/* Video Background with Crossfade for ultra-smooth transitions */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
-          {/* Using HTML5 video for complete control over looping behavior */}
-          <div className="absolute inset-0 video-background">
+          {/* Dual video system for crossfade - Primary Video */}
+          <div 
+            className={`absolute inset-0 video-background transition-opacity duration-1500 ${primaryVideo ? 'opacity-100' : 'opacity-0'}`}
+          >
             <video
+              ref={videoRef1}
               className="absolute w-full h-full object-cover"
               autoPlay
               muted
-              loop
               playsInline
               preload="auto"
               disablePictureInPicture
               disableRemotePlayback
               onLoadedData={() => setVideoLoaded(true)}
+            >
+              <source src="/videos/flying-towards-downtown-atlanta-SBV-346400577-4K.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          
+          {/* Secondary Video (hidden initially) */}
+          <div 
+            className={`absolute inset-0 video-background transition-opacity duration-1500 ${primaryVideo ? 'opacity-0' : 'opacity-100'}`}
+          >
+            <video
+              ref={videoRef2}
+              className="absolute w-full h-full object-cover"
+              muted
+              playsInline
+              preload="auto"
+              disablePictureInPicture
+              disableRemotePlayback
             >
               <source src="/videos/flying-towards-downtown-atlanta-SBV-346400577-4K.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
