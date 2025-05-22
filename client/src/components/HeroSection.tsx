@@ -51,9 +51,10 @@ export default function HeroSection() {
               muted
               loop
               playsInline
+              preload="auto"
               onLoadedData={() => setVideoLoaded(true)}
             >
-              <source src="/cleaning-video.mp4" type="video/mp4" />
+              <source src="/videos/flying-towards-downtown-atlanta-SBV-346400577-4K.mp4" type="video/mp4" />
               Your browser does not support HTML5 video.
             </video>
           </div>
