@@ -20,9 +20,19 @@ export default function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
       >
-        {/* Background with Overlay */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-gradient-to-r from-primary to-primary-dark">
-          <div className="absolute inset-0 bg-black/60 z-10"></div>
+        {/* Video Background with Overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          <div className="absolute inset-0">
+            <iframe 
+              className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              src="https://www.youtube.com/embed/n--__ZXV_qU?autoplay=1&mute=1&loop=1&playlist=n--__ZXV_qU&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1&version=3&start=3"
+              title="Atlanta City Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
         {/* Content Layout Container */}
