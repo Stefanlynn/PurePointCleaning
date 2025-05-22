@@ -1,17 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { scrollToSection } from "@/lib/utils";
 import { useContactForm } from "@/hooks/use-contact-form";
 
 export default function HeroSection() {
   const { formData, handleChange, handleSubmit, isSubmitting } = useContactForm();
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+  const videoFadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Function to handle smooth crossfade between videos
+  const crossfadeToNextVideo = () => {
+    setActiveVideoIndex(prev => prev === 0 ? 1 : 0);
+  };
 
   useEffect(() => {
-    // Set video as loaded after a short delay to ensure smooth animation
+    // Set initial video as loaded
     const timer = setTimeout(() => {
       setVideoLoaded(true);
     }, 500);
-    return () => clearTimeout(timer);
+    
+    // Set up interval for crossfading between videos
+    const interval = setInterval(() => {
+      crossfadeToNextVideo();
+    }, 40000); // Switch every 40 seconds (adjust as needed)
+    
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+      if (videoFadeTimeoutRef.current) {
+        clearTimeout(videoFadeTimeoutRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -20,14 +39,32 @@ export default function HeroSection() {
         id="home"
         className="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden"
       >
-        {/* Video Background with Overlay */}
+        {/* Video Background with Overlay and Crossfade */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-black/50 z-10"></div>
-          <div className="absolute inset-0">
+          
+          {/* First Video (starts with different section) */}
+          <div 
+            className={`absolute inset-0 transition-opacity duration-1000 ${activeVideoIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
+          >
             <iframe 
               className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1&version=3&start=10&end=110"
-              title="Atlanta City Video"
+              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&start=10"
+              title="Atlanta City Video 1"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          
+          {/* Second Video (same video but starts at different timestamp) */}
+          <div 
+            className={`absolute inset-0 transition-opacity duration-1000 ${activeVideoIndex === 1 ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <iframe 
+              className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&start=60"
+              title="Atlanta City Video 2"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
