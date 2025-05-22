@@ -44,7 +44,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-black/50 z-10"></div>
           
           {/* Using HTML5 video for complete control over looping behavior */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 video-background">
             <video
               className="absolute w-full h-full object-cover"
               autoPlay
@@ -52,6 +52,8 @@ export default function HeroSection() {
               loop
               playsInline
               preload="auto"
+              disablePictureInPicture
+              disableRemotePlayback
               onLoadedData={() => setVideoLoaded(true)}
             >
               <source src="/videos/flying-towards-downtown-atlanta-SBV-346400577-4K.mp4" type="video/mp4" />
