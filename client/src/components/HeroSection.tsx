@@ -26,7 +26,7 @@ export default function HeroSection() {
           <div className="absolute inset-0">
             <iframe 
               className="absolute w-[300%] md:w-[120%] h-[120%] md:h-[120%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-              src="https://www.youtube.com/embed/mJ-qvsxPHpY?autoplay=1&mute=1&loop=1&playlist=mJ-qvsxPHpY&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1&version=3"
+              src="https://www.youtube.com/embed/A6WNV4apkUo?autoplay=1&mute=1&loop=1&playlist=A6WNV4apkUo&controls=0&showinfo=0&rel=0&disablekb=1&modestbranding=1&playsinline=1&enablejsapi=1&version=3"
               title="Atlanta City Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
